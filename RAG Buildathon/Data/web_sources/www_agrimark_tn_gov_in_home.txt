@@ -1,0 +1,313 @@
+Source URL: https://www.agrimark.tn.gov.in/
+Page title: Department of Agricultural Marketing & Agri Business
+Retrieved: 2026-10-14T08:14
+
+Department of Agricultural Marketing & Agri Business
++
+R
+-
+TNSAMB – Getting Geographical Indication Tag (GI)
+|
+Tamil Nadu - GI Tagged Agricultural Product
+|
+ஏற்றுமதி கையேடு
+|
+A Guide to Agricultural Exports
+|
+Application for Obtaining the Subsidy for Value Addition Centers
+|
+Grant for Agri-tech Startups Application
+|
+உழவர் உற்பத்தியாளர் நிறுவனங்களின் மதிப்புகூட்டப்பட்ட பொருட்களை நேரடியாக பெற்று பயன் பெறுவீர் !!
+Crop Wise
+Crop :
+Select
+Tomato
+Potato
+Small Onion
+Big Onion
+Chilli
+Brinjal
+Bhendi
+Drumstick
+Ribbed gourd
+Bottle Gourd
+Snake gourd
+Bitter Gourd
+Coconut
+Radish
+Beans
+Avarai
+Carrot
+Betel vine
+Mango (fruit)
+Banana (fruit)
+Ginger
+sapota
+Guava
+Custard Apple
+Pappaya
+Cluster Beans
+Ash gourd
+Elephant foot Yam
+Mango (veg)
+Tapioca
+Baby Corn
+Amla
+Banana (veg)
+Banana flower
+Banana stem
+Banana Leaf
+Greens
+Coriander Leaf
+Curry Leaf
+Mint Leaf
+Pumpkin
+Lemon
+Beetroot
+Chow Chow
+Cabbage
+garlic
+Cowpea
+Mochai
+Colacasia
+Sweet Potato
+Kovvaikai
+Cucumber
+Cauliflower
+Groundnut
+Sweet corn
+Mushroom
+Knol Khol
+Turnip
+Peas
+Brocoli
+Capsicum
+Pomegranate
+Grapes
+Apple
+Orange
+Sweet lime
+Pinapple
+Muskmelon
+Watermelon
+Jackfruit
+Pear
+Sundaikai
+Fig
+Jamun
+Goose berry (Nellikkai)
+Citron (Narthai)
+Tamarind
+Perandai
+Butter Beans
+Soya Beans
+Karunaikizhangu
+Dragon fruit
+Siru Kizhagu
+Bajji chilli
+Onion leaf
+Water Apple
+Red Chilli
+Wood Apple
+Double Beans
+Bread Fruit
+Nerium
+kakatan
+Rose
+Marigold
+Tuberose
+Jasmine
+crossandra
+Pichi
+Red Cabbage
+Redgram
+Marikozhunthu
+Wild lemon
+Tender Coconut
+Sugarcane
+Tulasi
+Ma.Inji
+Purple Yam
+Pidikarunai
+Turmeric Bunch
+Panangkizhangu
+Palmyra fruit
+Athalakkai
+Ixora
+Kadampam
+Tomato(Local)
+Tomato (Bangalore)
+Brinjal (Green Striped)
+Brinjal (Blue Striped)
+Brinjal (White)
+Brinjal (Spiny)
+Bitter Gourd (Big)
+Bitter Gourd (Mithi Pagal)
+Potato (Ooty)
+Potato (Agra)
+Avarai (Big)
+Avarai (Nadu)
+garlic (Nadu)
+garlic (Malai Poondu)
+Mango (Neelam)
+Mango (Banganapalli)
+Mango (Alphonso)
+Mango (Bangalora)
+Mango (Imam Pasand)
+Mango (Malgova)
+Mango (Sindhura)
+Mango (Rumani)
+Banana (Red banana)
+Banana (Nendran)
+Banana (Rasthali)
+Banana  (Karpuravalli)
+Banana (Poovan)
+Banana (Yelakki)
+Banana (Matti)
+Banana (Nadu)
+Banana (Green banana)
+Plums
+Rambutan
+S.NO
+Uzhavar Santhai
+Price Rs/Kg
+Min
+Max
+{{$index+1}}
+{{key}}
+{{value.min}}
+{{value.max}}
+Uzhavar Santhai Wise
+District :
+Select
+Ariyalur
+Chengalpattu
+Chennai
+Coimbatore
+Cuddalore
+Dharmapuri
+Dindigul
+Erode
+Kallakurichi
+Kancheepuram
+Kanniyakumari
+Karur
+Krishnagiri
+Madurai
+Mayiladuthurai
+Nagapattinam
+Namakkal
+Perambalur
+Pudukkottai
+Ramanathapuram
+Ranipet
+Salem
+Sivagangai
+Tenkasi
+Thanjavur
+Theni
+TheNilgiris
+Thiruvannamalai
+Thoothukudi
+Tiruchirapalli
+Tirunelveli
+Tirupattur
+Tiruppur
+Tiruvallur
+Tiruvarur
+Vellore
+Villupuram
+Virudhunagar
+US :
+Select
+Farmer Rating :
+({{distprice_data.rat_count}})
+({{distprice_data.rat_count}})
+({{distprice_data.rat_count}})
+({{distprice_data.rat_count}})
+({{distprice_data.rat_count}})
+Consumer Rating :
+({{distprice_data.rat_countcon}})
+({{distprice_data.rat_countcon}})
+({{distprice_data.rat_countcon}})
+({{distprice_data.rat_countcon}})
+({{distprice_data.rat_countcon}})
+S.NO
+Veg & Fruit
+Price Rs/Kg
+Min
+Max
+{{$index+1}}
+{{key}}
+{{value.min}}
+{{value.max}}
+Notification
+Application
+Application for Obtaining the Subsidy for Value Addition Centers
+Download Application
+----------------------------------------------------------------------------------------
+Grant for Agri-tech Startups
+Download Application
+Previous
+Next
+Commodity Price 14-Oct-2026
+Paddy-ADT 37
+(
+Max Price 0
+,
+Min Price 0
+)
+|
+Paddy-BPT
+(
+Max Price 0
+,
+Min Price 0
+)
+|
+Paddy-OTHER
+(
+Max Price 4741
+,
+Min Price 0
+)
+|
+Paddy-Ponni
+(
+Max Price 0
+,
+Min Price 0
+)
+|
+Paddy-RNR
+(
+Max Price 0
+,
+Min Price 0
+)
+|
+Groundnut-
+(
+Max Price 12374
+,
+Min Price 10625
+)
+|
+Welcome to Department of Agricultural Marketing & Agri Business
+Agricultural Marketing and Agri Business Department act as nerve centre from where marketing impulse are transmitted to put all the marketing interventions on track to safeguard the interest of both famers and consumers. The Department is focusing and taking concerted efforts to ensure remunerative price to the farmers by creating infrastructure facilities for marketing and post-harvest management. To improve farmers’ income recently more thrust are given for promotion of Farmer Producer Organization (FPO), implementation of  Supply Chain Management for Perishable Commodities and creation of e-trading facilities
+Policies
+Food Processing Policy
+Tamil Nadu is one of the bigger States of the country with an area of 1,30,058 sq. Kms and a population of 72 million as per 2011 census. The State has a coastline of 1076 Kms and its climatic conditions are basically tropical and subtropical. There are 7 Agro climatic Zones suitable for cultivation of 2 various crops.
+Director Desk
+Thiru.Chandra Sekhar Sakhamuri,I.A.S.,
+Director
+Director of Agricultural Marketing & Agri Business, Chennai-32.
+Regulated Markets, Uzhavar sandhai, Cold storages, Specialized Market Complex and Primary Processing Centres are the infrastructures of the Department exclusively made for the farmers. Farmers, Traders and Consumers are requested to utilize these facilities and prosper in the day to day life.
+Our Blog
+Food Parks
+It is proposed to establish Food Parks / Agro Processing Clusters in 8 locations of Tamil Nadu viz., Ariyalur, Perambalur, Karur, Nagapattinam, Dharmapuri, Ramanathapuram, Tiruvarur and Tenkasi in 2020-21 through Ministry of Food Processing Industries grant under PMKSY.
+Supply Chain Management Project
+Supply Chain Management Project is going to be extended to 8 more Districts viz., Salem, Erode, Tiruvallur, Kancheepuram, Tiruvannamalai, Cuddalore, Villupuram and Karur.
+Regulated Market
+Strengthening of Regulated Market systems to integrate non conventional groups like FPOs, FIGs and FPGs

@@ -1,0 +1,139 @@
+Source: 2026-27-Micro-Irrigation-First-Instalment-GO-(87).pdf, page 2
+Page: 2
+Unit: Rs in Crore
+
+The Sanctioning Committee approved the Annual Action Plan for 2026-27. Table 1 lists the following amounts:
+GOI Share; State Mandatory Share; State Additional Share; 5% GST on Material Cost; State Additional Share Including GST; Total Subsidy Including GST.
+
+I(a). Per Drop More Crop - Installation of Micro Irrigation System
+
+Category SF/MF-80%:
+GOI Share: 281.0340.
+State Mandatory Share: 187.3560.
+State Additional Share: 383.2282.
+5% GST on Material Cost: 42.5809.
+State Additional Share Including GST: 425.8091.
+Total Subsidy Including GST: 894.1991.
+
+Category Others-20%:
+GOI Share: 70.2585.
+State Mandatory Share: 46.8390.
+State Additional Share: 78.0650.
+5% GST on Material Cost: 13.0108.
+State Additional Share Including GST: 91.0758.
+Total Subsidy Including GST: 208.1733.
+
+Admin Cost (2.5%):
+GOI Share: 9.0075.
+State Mandatory Share: 6.0050.
+State Additional Share: 0.0000.
+5% GST on Material Cost: 0.0000.
+State Additional Share Including GST: 0.0000.
+Total Subsidy Including GST: 15.0125.
+
+Total for section I(a):
+GOI Share: 360.3000.
+State Mandatory Share: 240.2000.
+State Additional Share: 461.2932.
+5% GST on Material Cost: 55.5917.
+State Additional Share Including GST: 516.8849.
+Total Subsidy Including GST: 1117.3849.
+
+I(b). Per Drop More Crop - Installation of Micro Irrigation System for FRA patta holders
+
+Scheme Cost:
+GOI Share: 1.3075.
+State Mandatory Share: 0.8717.
+State Additional Share: 0.2421.
+5% GST on Material Cost: 0.1211.
+State Additional Share Including GST: 0.3632.
+Total Subsidy Including GST: 2.5424.
+
+Admin Cost (2.5%):
+GOI Share: 0.0335.
+State Mandatory Share: 0.0223.
+State Additional Share: 0.0000.
+5% GST on Material Cost: 0.0000.
+State Additional Share Including GST: 0.0000.
+Total Subsidy Including GST: 0.0558.
+
+Total for section I(b):
+GOI Share: 1.3410.
+State Mandatory Share: 0.8940.
+State Additional Share: 0.2421.
+5% GST on Material Cost: 0.1211.
+State Additional Share Including GST: 0.3632.
+Total Subsidy Including GST: 2.5982.
+
+Total for I(a) + I(b), Scheme Cost:
+GOI Share: 352.6000.
+State Mandatory Share: 235.0667.
+State Additional Share: 461.5353.
+5% GST on Material Cost: 55.7128.
+State Additional Share Including GST: 517.2481.
+Total Subsidy Including GST: 1104.9148.
+
+Total for I(a) + I(b), Admin Cost (2.5%):
+GOI Share: 9.0410.
+State Mandatory Share: 6.0273.
+State Additional Share: 0.0000.
+5% GST on Material Cost: 0.0000.
+State Additional Share Including GST: 0.0000.
+Total Subsidy Including GST: 15.0683.
+
+Total for I(a) + I(b):
+GOI Share: 361.6410.
+State Mandatory Share: 241.0940.
+State Additional Share: 461.5353.
+5% GST on Material Cost: 55.7128.
+State Additional Share Including GST: 517.2481.
+Total Subsidy Including GST: 1119.9831.
+
+II. Supplementary Water Management Activities (SWMA)
+
+Scheme Cost:
+GOI Share: 3.5100.
+State Mandatory Share: 2.3400.
+State Additional Share, GST, and State Additional Share Including GST: blank in the source table.
+Total Subsidy Including GST: 5.8500.
+
+Admin Cost (2.5%):
+GOI Share: 0.0900.
+State Mandatory Share: 0.0600.
+State Additional Share, GST, and State Additional Share Including GST: blank in the source table.
+Total Subsidy Including GST: 0.1500.
+
+Total for section II:
+GOI Share: 3.6000.
+State Mandatory Share: 2.4000.
+State Additional Share, GST, and State Additional Share Including GST: blank in the source table.
+Total Subsidy Including GST: 6.0000.
+
+Grand Total, Scheme Cost:
+GOI Share: 356.1100.
+State Mandatory Share: 237.4067.
+State Additional Share: 461.5353.
+5% GST on Material Cost: 55.7128.
+State Additional Share Including GST: 517.2481.
+Total Subsidy Including GST: 1110.7648.
+
+Grand Total, Admin Cost:
+GOI Share: 9.1310.
+State Mandatory Share: 6.0873.
+State Additional Share: 0.0000.
+5% GST on Material Cost: 0.0000.
+State Additional Share Including GST: 0.0000.
+Total Subsidy Including GST: 15.2183.
+
+Grand Total:
+GOI Share: 365.2410.
+State Mandatory Share: 243.4940.
+State Additional Share: 461.5353.
+5% GST on Material Cost: 55.7128.
+State Additional Share Including GST: 517.2481.
+Total Subsidy Including GST: 1125.9831.
+
+Verified table totals (Rs in Crore):
+Total for sections I(a) + I(b), including admin cost: 1119.9831.
+SWMA total including admin cost: 6.0000 (scheme cost 5.8500 + admin cost 0.1500).
+Grand total including sections I(a), I(b), and SWMA: 1125.9831.
