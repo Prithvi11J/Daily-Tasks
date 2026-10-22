@@ -1,0 +1,103 @@
+
+{
+  "name": "Google_Sheets_to_Gmail_Automation",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [0, 0],
+      "id": "a4f7c30c-6ca4-4921-9a0b-965cff3a1780",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "",
+          "mode": "list",
+          "cachedResultName": ""
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "",
+          "mode": "list",
+          "cachedResultName": ""
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [224, 0],
+      "id": "7270adb1-9f2b-4614-99b3-213fc0d6fe90",
+      "name": "Get row(s) in sheet"
+    },
+    {
+      "parameters": {
+        "jsCode": "const rows = $input.all();\n\n// Build a readable summary from the sheet rows.\nconst validRows = rows.filter(row => row.json.Name && row.json.Course);\n\nif (validRows.length === 0) {\n  return [];\n}\n\nconst summary = validRows.map(row =>\n  `Name: ${row.json.Name}\\nCourse: ${row.json.Course}\\nStatus: ${row.json.Status || \"Not specified\"}`\n).join(\"\\n\\n\");\n\nconst subject = \"Course Status Summary\";\nconst body = `Hi,\n\nHere is the latest course status summary:\n\n${summary}\n\nRegards,\nYour Automation Bot`;\n\nreturn [{\n  json: { subject, body }\n}];\n\n// Understand the Important Code\n// $input.all() retrieves all rows from Google Sheets.\n// filter() removes rows missing a name or course.\n// map() converts each row into readable text.\n// join() combines the records.\n// return sends one structured item to the Gmail node.\n\n// Important Notes\n// n8n's Code node supports JavaScript.\n// Returning [] prevents a blank email when no valid rows exist.\n// No email is sent in this step."
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [448, 0],
+      "id": "81de5f1a-ff21-43ee-b753-3288f19a020d",
+      "name": "Code in JavaScript"
+    },
+    {
+      "parameters": {
+        "sendTo": "your-email@example.com",
+        "subject": "={{ $json.subject }}",
+        "emailType": "text",
+        "message": "={{ $json.body }}",
+        "options": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.2,
+      "position": [672, 0],
+      "id": "08d7a39a-2c2f-4ba4-ab91-4fe52a24c854",
+      "name": "Send a message"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "Get row(s) in sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get row(s) in sheet": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript": {
+      "main": [
+        [
+          {
+            "node": "Send a message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "tags": []
+}
