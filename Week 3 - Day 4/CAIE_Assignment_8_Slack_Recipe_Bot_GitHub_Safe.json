@@ -1,0 +1,206 @@
+{
+  "name": "CAIE Assignment 8 - Slack Recipe Bot",
+  "nodes": [
+    {
+      "parameters": {
+        "trigger": [
+          "message"
+        ],
+        "channelId": {
+          "__rl": true,
+          "value": "REPLACE_WITH_YOUR_CHANNEL_ID",
+          "mode": "id"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.slackTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "4a242449-e8ce-44a5-83cb-e7f459d67b97",
+      "name": "Slack Trigger"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "de40df63-c54b-4346-a0a9-80b73c590216",
+              "name": "recipe",
+              "value": "={{ $json.text }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.5,
+      "position": [
+        448,
+        -80
+      ],
+      "id": "18911089-6b3c-4a41-9a17-5efa4f372592",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=You are a helpful Indian and international cooking assistant.\n\nUser request: {{ $json.recipe }}\n\nYour task is to identify the dish and generate a shopping list of ingredients.\n\nRules:\n1. Recognize common dishes even when names are informal, abbreviated, or misspelled. Examples: chicken fry, chicken biryani, egg fry, dosa, paneer butter masala.\n2. If the user specifies a number of people, adjust ingredient quantities accordingly. Otherwise assume 2 servings.\n3. Return all essential ingredients with approximate quantities.\n4. Use a simple bulleted list suitable for Slack. Avoid Markdown double asterisks.\n5. Do not provide cooking instructions.\n6. If several variations exist, use a common version of the dish.\n7. Only ask for clarification when the request is genuinely impossible to interpret or is not a recognizable dish.\n8. Never reject a recognizable dish simply because it has a short or informal name.\n\nOutput the dish name, number of servings, and ingredient list.",
+        "messages": {
+          "messageValues": []
+        },
+        "batching": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.9,
+      "position": [
+        672,
+        0
+      ],
+      "id": "96fd341f-e796-487f-8cb4-389b1d9d876a",
+      "name": "Basic LLM Chain"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "value": "gpt-4o-mini",
+          "mode": "list",
+          "cachedResultName": "gpt-4o-mini"
+        },
+        "builtInTools": {},
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.3,
+      "position": [
+        608,
+        208
+      ],
+      "id": "e544a5a7-0973-4acb-b0f5-cf321bc9eb4a",
+      "name": "OpenAI Chat Model"
+    },
+    {
+      "parameters": {
+        "select": "channel",
+        "channelId": {
+          "__rl": true,
+          "value": "={{ $('Slack Trigger').first().json.channel }}",
+          "mode": "id"
+        },
+        "text": "={{ $json.text }}",
+        "otherOptions": {
+          "includeLinkToWorkflow": false
+        }
+      },
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 2.7,
+      "position": [
+        1040,
+        0
+      ],
+      "id": "5c90ffe1-13e7-4e17-9b03-b47deb91a7b9",
+      "name": "Send a message"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 4
+          },
+          "conditions": [
+            {
+              "id": "4bc32ab7-d5b0-448f-b526-7935abc27d86",
+              "leftValue": "={{ !$json.bot_id && !$json.subtype && !!$json.user && !!$json.text?.trim() }}",
+              "rightValue": "",
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.4,
+      "position": [
+        224,
+        0
+      ],
+      "id": "a3512c16-5058-4c2a-b3c4-00a6ca016410",
+      "name": "If"
+    }
+  ],
+  "connections": {
+    "Slack Trigger": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "Basic LLM Chain",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Basic LLM Chain": {
+      "main": [
+        [
+          {
+            "node": "Send a message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Basic LLM Chain",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "tags": []
+}
