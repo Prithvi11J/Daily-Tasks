@@ -1,0 +1,27 @@
+
+services:
+  hybrid-rag:
+    build: .
+    restart: unless-stopped
+    env_file:
+      - .env.production
+    volumes:
+      - ./chroma_db:/app/chroma_db
+    networks:
+      - rag_internal
+      - proxy
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=n8n_default"
+      - "traefik.http.routers.hybrid-rag.rule=Host(`rag.prithvi11j.tech`)"
+      - "traefik.http.routers.hybrid-rag.entrypoints=websecure"
+      - "traefik.http.routers.hybrid-rag.tls=true"
+      - "traefik.http.routers.hybrid-rag.tls.certresolver=mytlschallenge"
+      - "traefik.http.services.hybrid-rag.loadbalancer.server.port=8501"
+
+networks:
+  rag_internal:
+    driver: bridge
+  proxy:
+    external: true
+    name: n8n_default
