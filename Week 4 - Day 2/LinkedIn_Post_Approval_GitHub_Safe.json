@@ -1,0 +1,319 @@
+{
+  "name": "LinkedIn Post Approval",
+  "nodes": [
+    {
+      "parameters": {
+        "formTitle": "LinkedIn Post Generator",
+        "formDescription": "Enter a topic to generate a LinkedIn post for review and approval.",
+        "formFields": {
+          "values": [
+            {
+              "fieldLabel": "Topic",
+              "requiredField": true
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.formTrigger",
+      "typeVersion": 2.6,
+      "position": [
+        0,
+        0
+      ],
+      "id": "74ee9020-d528-40c6-90d3-638f463e887c",
+      "name": "On form submission"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=You are a professional LinkedIn content writer.\n\nWrite a compelling LinkedIn post about:\n{{ $json.Topic }}\n\nRequirements:\n- Start with an attention-grabbing hook.\n- Write between 120 and 150 words.\n- Use a professional yet conversational tone.\n- Use short paragraphs for readability.\n- Include one clear call to action (CTA).\n- Include a maximum of 3 relevant hashtags.\n- Avoid exaggerated claims and unnecessary emojis.\n- Return only the finished LinkedIn post.",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3.1,
+      "position": [
+        160,
+        0
+      ],
+      "id": "ca233bfd-a0b4-4c28-93f8-a79aff32d561",
+      "name": "Writer Agent"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "value": "gpt-4.1-mini",
+          "mode": "list",
+          "cachedResultName": "gpt-4.1-mini"
+        },
+        "builtInTools": {},
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.3,
+      "position": [
+        96,
+        208
+      ],
+      "id": "4e79fd5e-2055-4d07-b2ff-06acb0a1ace8",
+      "name": "OpenAI Chat Model"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=You are an experienced LinkedIn content editor.\n\nReview and improve the following LinkedIn post:\n\n{{ $json.output }}\n\nReview criteria:\n1. Hook: Does the opening capture attention?\n2. Clarity: Is the message clear and engaging?\n3. CTA: Does the post encourage meaningful engagement?\n\nInstructions:\n- Internally score Hook, Clarity, and CTA out of 10.\n- Rewrite the weakest parts to improve quality.\n- Maintain a professional, conversational tone.\n- Keep the post between 120 and 150 words.\n- Include one clear CTA and a maximum of 3 hashtags.\n- Preserve the original topic and factual accuracy.\n- Return ONLY the final improved LinkedIn post.\n- Do not include scores, feedback, or explanations.",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3.1,
+      "position": [
+        480,
+        0
+      ],
+      "id": "7685fe83-cc79-4e68-91bf-561440ac4d2c",
+      "name": "Reviewer Agent"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "value": "gpt-4.1-mini",
+          "mode": "list",
+          "cachedResultName": "gpt-4.1-mini"
+        },
+        "builtInTools": {},
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.3,
+      "position": [
+        464,
+        208
+      ],
+      "id": "42a47100-5d36-42e0-be2e-ffb640ea9ae9",
+      "name": "OpenAI Chat Model1"
+    },
+    {
+      "parameters": {
+        "operation": "sendAndWait",
+        "sendTo": "YOUR_EMAIL@example.com",
+        "subject": "LinkedIn Post - Approval Required",
+        "message": "={{ $json.output }}",
+        "approvalOptions": {
+          "values": {
+            "approvalType": "double",
+            "disapproveLabel": "Reject"
+          }
+        },
+        "options": {
+          "limitWaitTime": {
+            "values": {
+              "resumeUnit": "days"
+            }
+          }
+        }
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.2,
+      "position": [
+        816,
+        0
+      ],
+      "id": "11b84364-3e33-4a06-954d-8a42b1e33a29",
+      "name": "Send message and wait for response"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 4
+          },
+          "conditions": [
+            {
+              "id": "bd1bd105-7bc1-4cdc-890d-f5750e5cbff0",
+              "leftValue": "={{ $json.data.approved }}",
+              "rightValue": "",
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.4,
+      "position": [
+        992,
+        0
+      ],
+      "id": "bf16294c-937e-49c1-9f91-e1b348f52f3c",
+      "name": "If"
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "REPLACE_WITH_SPREADSHEET_ID",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "Sheet1",
+          "mode": "name"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Date": "={{ $now.setZone('Asia/Kolkata').toFormat('yyyy-MM-dd HH:mm:ss') }}",
+            "Topic": "={{ $('On form submission').first().json.Topic }}",
+            "Final Post": "={{ $('Reviewer Agent').first().json.output }}",
+            "Status": "=Approved"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "Date",
+              "displayName": "Date",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Topic",
+              "displayName": "Topic",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Final Post",
+              "displayName": "Final Post",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Status",
+              "displayName": "Status",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        1216,
+        -112
+      ],
+      "id": "aa8eca83-3db7-45b6-bb8f-c70f47e038fc",
+      "name": "LinkedIn Post Approval Tracker"
+    }
+  ],
+  "connections": {
+    "On form submission": {
+      "main": [
+        [
+          {
+            "node": "Writer Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Writer Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Writer Agent": {
+      "main": [
+        [
+          {
+            "node": "Reviewer Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model1": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Reviewer Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Reviewer Agent": {
+      "main": [
+        [
+          {
+            "node": "Send message and wait for response",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send message and wait for response": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "node": "LinkedIn Post Approval Tracker",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  }
+}
