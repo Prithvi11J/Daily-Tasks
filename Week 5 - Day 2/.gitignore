@@ -1,0 +1,54 @@
+
+# Virtual environments - exclude installed packages
+venv/
+.venv/
+env/
+
+# API keys and environment variables - protect secrets
+.env
+.env.*
+!.env.example
+
+# Python cache files - automatically generated
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Python build and package files
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Testing and coverage files
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# Type checking and linting caches
+.mypy_cache/
+.ruff_cache/
+
+# IDE and editor settings
+.vscode/
+.idea/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+
+# CrewAI execution traces and local outputs
+crewai_storage/
+output/
+outputs/
+
+# Customer Support Buildathon - generated files
+answers.txt
+.streamlit/secrets.toml
