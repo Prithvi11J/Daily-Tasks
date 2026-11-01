@@ -1,0 +1,8 @@
+{
+  "iam": {"team":"IAM", "scope":"Identity lifecycle, service account creation, application access, SSO, MFA and privileged access requests (PAM).", "next_step":"Use the approved identity/access request process; PAM always requires authorized human approval and no access is granted by this demo."},
+  "cloud_sec": {"team":"Cloud Security", "scope":"Cloud configuration reviews, cloud security posture, cloud IAM policy risks and cloud misconfiguration reviews.", "next_step":"Request a cloud security review with the cloud environment and high-level issue details."},
+  "network_sec": {"team":"Network Security", "scope":"Corporate VPN, firewall access reviews, network segmentation, and network connectivity security controls.", "next_step":"Use the approved network-support process and describe the affected service."},
+  "endpoint_sec": {"team":"Endpoint Security", "scope":"Managed devices, endpoint protection, malware alerts, and device incidents. Laptop purchases and replacement may belong to IT Service Desk or asset management, not Endpoint Security.", "next_step":"For an ordinary laptop replacement, confirm whether IT Service Desk or asset management owns the request. Only use incident reporting for devices reported lost, stolen, or compromised."},
+  "data_sec": {"team":"Data Security", "scope":"Data classification, DLP, sensitive data handling, and data exposure concerns.", "next_step":"Use the approved data-security process; do not put sensitive records in this chat."},
+  "prod_sec": {"team":"Product Security", "scope":"Application vulnerabilities, secure development, code security findings, and product security reviews.", "next_step":"Request a product security review with a high-level description, avoiding credentials or exploit payloads."}
+}
