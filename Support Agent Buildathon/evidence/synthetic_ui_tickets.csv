@@ -1,0 +1,16 @@
+ticket_id,timestamp,customer_name,order_id,complaint,category,urgency,sentiment,kb_sources,response,status,escalation_reason
+c407fd32-267a-49db-b4ee-b02f4954e568,2026-11-05T17:31:46.329281+00:00,SYNTHETIC APPTEST CUSTOMER,DEMO-UI,The blender I received is broken. Can I get a replacement?,Product,Medium,Neutral,product.md,"Here is the applicable policy and the next step you can take:
+
+Stop using a damaged or defective product. Contact support within 7 days of delivery with your order number, a description of the problem, and photos of the item and packaging. [product.md]
+
+A representative will review the evidence and, if the claim is approved, arrange a replacement subject to stock availability or discuss an eligible refund. [product.md]",Resolved,
+6ebc2614-0da4-4d26-b2ae-182076fb338e,2026-11-05T17:31:53.613768+00:00,SYNTHETIC APPTEST CUSTOMER,DEMO-UI,"[Follow-up to ticket c407fd32-267a-49db-b4ee-b02f4954e568]
+Previous customer context:
+The blender I received is broken. Can I get a replacement?
+Current follow-up:
+What about a replacement?",Product,Medium,Neutral,product.md,"Here is the applicable policy and the next step you can take:
+
+Contact support within 7 days of delivery with your order number, a description of the problem, and photos of the item and packaging. [product.md]
+
+A representative will review the evidence and, if the claim is approved, arrange a replacement subject to stock availability or discuss an eligible refund. [product.md]",Resolved,
+02573517-33e1-4f0b-876e-ac497255575f,2026-11-05T17:31:58.954293+00:00,SYNTHETIC APPTEST CUSTOMER,DEMO-UI,Do you sell gift cards for 500 employees with custom branding?,Other,Low,Neutral,,"I’m sorry this needs further review. This ticket is flagged for human support; no refund, replacement, account change, or payment action has been performed. A support representative must review the details before a resolution can be confirmed.",Escalated,No matching policy documents; Low or invalid confidence; Missing or unverified policy evidence

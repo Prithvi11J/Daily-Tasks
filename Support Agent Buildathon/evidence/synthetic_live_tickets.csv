@@ -1,0 +1,29 @@
+ticket_id,timestamp,customer_name,order_id,complaint,category,urgency,sentiment,kb_sources,response,status,escalation_reason
+63589967-6bb2-4a1e-8295-318fbf7fc411,2026-11-05T17:30:55.022345+00:00,SYNTHETIC TEST CUSTOMER,DEMO-ONLY,Where is my order? It was supposed to arrive yesterday.,Shipping,Medium,Neutral,shipping.md,"Here is the applicable policy and the next step you can take:
+
+For a delayed order, open the tracking link in your dispatch email and check the latest carrier update. [shipping.md]
+
+If the expected delivery date has passed, contact support with your order number so a representative can investigate with the carrier. [shipping.md]",Resolved,
+cc5628a0-279a-48da-9901-0ed502af4c17,2026-11-05T17:31:02.097232+00:00,SYNTHETIC TEST CUSTOMER,DEMO-ONLY,I want to return the shoes I bought last week. How do I get a refund?,Refund,Low,Neutral,refund.md; product.md,"Here is the applicable policy and the next step you can take:
+
+Unused items, including shoes, in their original packaging can be requested for return within 30 days of delivery. [refund.md]
+
+Contact support with your order number and the item you want to return. [refund.md]
+
+After an approved returned item is received and inspected, an eligible refund is sent to the original payment method within 5-10 business days. [refund.md]",Resolved,
+8dac9e5a-70d4-4457-8aa7-5f97573799bf,2026-11-05T17:31:08.465658+00:00,SYNTHETIC TEST CUSTOMER,DEMO-ONLY,I forgot my password and can't log in.,Account,Low,Neutral,account.md,"Here is the applicable policy and the next step you can take:
+
+On the sign-in page, select ""Forgot password"", enter the email address linked to your account, and follow the reset link sent by email. [account.md]
+
+If the reset email does not arrive or the reset link has expired, request a new link. [account.md]",Resolved,
+7f538cc2-ab74-42bc-b473-d0a4f57befd3,2026-11-05T17:31:15.682290+00:00,SYNTHETIC TEST CUSTOMER,DEMO-ONLY,The blender I received is broken. Can I get a replacement?,Product,Medium,Neutral,product.md,"Here is the applicable policy and the next step you can take:
+
+Stop using a damaged or defective product. Contact support within 7 days of delivery with your order number, a description of the problem, and photos of the item and packaging. [product.md]
+
+A representative will review the evidence and, if the claim is approved, arrange a replacement subject to stock availability or discuss an eligible refund. [product.md]",Resolved,
+1208dff6-8fff-442e-9b8a-7f821db3deff,2026-11-05T17:31:20.980646+00:00,SYNTHETIC TEST CUSTOMER,DEMO-ONLY,You charged my card three times! Fix this now or I'm contacting my bank and a lawyer.,Billing,High,Very Angry,,"I’m sorry this needs further review. This ticket is flagged for human support; no refund, replacement, account change, or payment action has been performed. A support representative must review the details before a resolution can be confirmed.",Escalated,"High urgency; Angry customer; Legal, fraud, payment dispute, or severe anger signal; No matching policy documents; Low or invalid confidence; Missing or unverified policy evidence"
+445fa8d5-c075-44b0-93d2-04ac55c03a51,2026-11-05T17:31:26.967972+00:00,SYNTHETIC TEST CUSTOMER,DEMO-ONLY,Do you sell gift cards for a company of 500 employees with custom branding?,Other,Low,Neutral,,"I’m sorry this needs further review. This ticket is flagged for human support; no refund, replacement, account change, or payment action has been performed. A support representative must review the details before a resolution can be confirmed.",Escalated,No matching policy documents; Low or invalid confidence; Missing or unverified policy evidence
+94bc5eca-9535-422c-a063-e4cada72e4d9,2026-11-05T17:31:32.582186+00:00,SYNTHETIC TEST CUSTOMER,DEMO-ONLY,There is an unauthorized purchase on my account. This is fraud.,Billing,High,Very Angry,account.md; refund.md,"I’m sorry this needs further review. This ticket is flagged for human support; no refund, replacement, account change, or payment action has been performed. A support representative must review the details before a resolution can be confirmed.",Escalated,"High urgency; Angry customer; Legal, fraud, payment dispute, or severe anger signal; Low or invalid confidence; Missing or unverified policy evidence"
+116aecad-e4ca-4353-8281-436f4963f270,2026-11-05T17:31:39.340770+00:00,SYNTHETIC TEST CUSTOMER,DEMO-ONLY,How long does standard delivery normally take?,Shipping,Low,Neutral,shipping.md,"Here is the applicable policy and the next step you can take:
+
+Standard orders normally arrive within 3-5 business days after dispatch. [shipping.md]",Resolved,

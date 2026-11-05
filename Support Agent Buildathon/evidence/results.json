@@ -1,0 +1,703 @@
+{
+  "synthetic": true,
+  "model": "gpt-4o-mini",
+  "evaluated": 8,
+  "passed": 8,
+  "failed": 0,
+  "pass_rate": 1.0,
+  "retrieval_source_accuracy": 1.0,
+  "cases": [
+    {
+      "case": "shipping_delay",
+      "checks": {
+        "status": true,
+        "category": true,
+        "expected_source": true,
+        "factual_answer": true,
+        "agent_order": true,
+        "actual_search_tool": true,
+        "actual_log_tool": true,
+        "no_fallback": true,
+        "no_unsupported_promises": true,
+        "exactly_one_log_row": true
+      },
+      "passed": true,
+      "synthetic": true,
+      "mode": "REAL OpenAI gpt-4o-mini API execution",
+      "expected_status": "Resolved",
+      "expected_categories": [
+        "Shipping"
+      ],
+      "result": {
+        "ticket_id": "63589967-6bb2-4a1e-8295-318fbf7fc411",
+        "timestamp": "2026-11-05T17:30:55.022345+00:00",
+        "customer_name": "SYNTHETIC TEST CUSTOMER",
+        "order_id": "DEMO-ONLY",
+        "complaint": "Where is my order? It was supposed to arrive yesterday.",
+        "category": "Shipping",
+        "urgency": "Medium",
+        "sentiment": "Neutral",
+        "kb_sources": "shipping.md",
+        "response": "Here is the applicable policy and the next step you can take:\n\nFor a delayed order, open the tracking link in your dispatch email and check the latest carrier update. [shipping.md]\n\nIf the expected delivery date has passed, contact support with your order number so a representative can investigate with the carrier. [shipping.md]",
+        "status": "Resolved",
+        "escalation_reason": ""
+      },
+      "agent_events": [
+        {
+          "phase": "query",
+          "output": "Agent started."
+        },
+        {
+          "phase": "query",
+          "output": "category='Shipping' urgency='Medium' sentiment='Neutral' summary='Customer inquiring about the status of a delayed order.'"
+        },
+        {
+          "phase": "knowledge",
+          "output": "Agent started."
+        },
+        {
+          "phase": "knowledge",
+          "output": "[FunctionCall(id='call_oQspZYfERyVcyrAO7QoybLxP', arguments='{}', name='search_kb')]"
+        },
+        {
+          "phase": "knowledge",
+          "output": "[FunctionExecutionResult(content='[{\"filename\": \"shipping.md\", \"passage\": \"# Shipping Policy — fictional demo store\\\\n\\\\nThese policies are fictional coursework examples, not a real retailer\\'s promises.\\\\n\\\\n## Standard delivery\\\\nStandard orders normally arrive within 3-5 business days after dispatch. Delivery estimates are not guarantees.\\\\n\\\\n## Delayed orders\\\\nFor a delayed order, open the tracking link in your dispatch email and check the latest carrier update. If the expected delivery date has passed, contact support with your order number so a representative can investigate with the carrier.\\\\n\\\\nThis assistant cannot look up live tracking, confirm an order\\'s location, contact a carrier, or guarantee an arrival date.\\\\n\"}]', name='search_kb', call_id='call_oQspZYfERyVcyrAO7QoybLxP', is_error=False)]"
+        },
+        {
+          "phase": "knowledge",
+          "output": "I found a document related to shipping policies. The filename is \"shipping.md\"."
+        },
+        {
+          "phase": "resolution",
+          "output": "Agent started."
+        },
+        {
+          "phase": "resolution",
+          "output": "confidence=1.0 evidence=[Evidence(filename='shipping.md', quote='For a delayed order, open the tracking link in your dispatch email and check the latest carrier update.'), Evidence(filename='shipping.md', quote='If the expected delivery date has passed, contact support with your order number so a representative can investigate with the carrier.')]"
+        },
+        {
+          "phase": "log",
+          "output": "Agent started."
+        },
+        {
+          "phase": "log",
+          "output": "[FunctionCall(id='call_jfiUJ6iQsgkcfEMGwYgAhuEw', arguments='{}', name='log_ticket')]"
+        },
+        {
+          "phase": "log",
+          "output": "[FunctionExecutionResult(content='63589967-6bb2-4a1e-8295-318fbf7fc411', name='log_ticket', call_id='call_jfiUJ6iQsgkcfEMGwYgAhuEw', is_error=False)]"
+        },
+        {
+          "phase": "log",
+          "output": "The ticket has been successfully logged."
+        }
+      ]
+    },
+    {
+      "case": "refund",
+      "checks": {
+        "status": true,
+        "category": true,
+        "expected_source": true,
+        "factual_answer": true,
+        "agent_order": true,
+        "actual_search_tool": true,
+        "actual_log_tool": true,
+        "no_fallback": true,
+        "no_unsupported_promises": true,
+        "exactly_one_log_row": true
+      },
+      "passed": true,
+      "synthetic": true,
+      "mode": "REAL OpenAI gpt-4o-mini API execution",
+      "expected_status": "Resolved",
+      "expected_categories": [
+        "Refund"
+      ],
+      "result": {
+        "ticket_id": "cc5628a0-279a-48da-9901-0ed502af4c17",
+        "timestamp": "2026-11-05T17:31:02.097232+00:00",
+        "customer_name": "SYNTHETIC TEST CUSTOMER",
+        "order_id": "DEMO-ONLY",
+        "complaint": "I want to return the shoes I bought last week. How do I get a refund?",
+        "category": "Refund",
+        "urgency": "Low",
+        "sentiment": "Neutral",
+        "kb_sources": "refund.md; product.md",
+        "response": "Here is the applicable policy and the next step you can take:\n\nUnused items, including shoes, in their original packaging can be requested for return within 30 days of delivery. [refund.md]\n\nContact support with your order number and the item you want to return. [refund.md]\n\nAfter an approved returned item is received and inspected, an eligible refund is sent to the original payment method within 5-10 business days. [refund.md]",
+        "status": "Resolved",
+        "escalation_reason": ""
+      },
+      "agent_events": [
+        {
+          "phase": "query",
+          "output": "Agent started."
+        },
+        {
+          "phase": "query",
+          "output": "category='Refund' urgency='Low' sentiment='Neutral' summary='Customer wants to return shoes purchased last week and is inquiring about the refund process.'"
+        },
+        {
+          "phase": "knowledge",
+          "output": "Agent started."
+        },
+        {
+          "phase": "knowledge",
+          "output": "[FunctionCall(id='call_wGueIICRlu6KvUqPpfzDX7tm', arguments='{}', name='search_kb')]"
+        },
+        {
+          "phase": "knowledge",
+          "output": "[FunctionExecutionResult(content='[{\"filename\": \"refund.md\", \"passage\": \"# Returns and Refunds Policy — fictional demo store\\\\n\\\\nThese policies are fictional coursework examples, not a real retailer\\'s promises.\\\\n\\\\n## Return eligibility\\\\nUnused items, including shoes, in their original packaging can be requested for return within 30 days of delivery. Keep your proof of purchase.\\\\n\\\\n## How to request a return\\\\nContact support with your order number and the item you want to return. A representative will review eligibility and provide return instructions. Do not send items back until the return is approved.\\\\n\\\\n## Refund timing\\\\nAfter an approved returned item is received and inspected, an eligible refund is sent to the original payment method within 5-10 business days. This assistant cannot approve returns or issue refunds.\\\\n\"}, {\"filename\": \"product.md\", \"passage\": \"# Damaged and Defective Products Policy — fictional demo store\\\\n\\\\nThese policies are fictional coursework examples, not a real retailer\\'s promises.\\\\n\\\\n## Broken product on arrival\\\\nStop using a damaged or defective product. Contact support within 7 days of delivery with your order number, a description of the problem, and photos of the item and packaging.\\\\n\\\\n## Replacement review\\\\nA representative will review the evidence and, if the claim is approved, arrange a replacement subject to stock availability or discuss an eligible refund. Keep the damaged item and packaging until you receive instructions.\\\\n\\\\nThis assistant cannot approve a replacement, determine stock, or authorize a refund.\\\\n\"}]', name='search_kb', call_id='call_wGueIICRlu6KvUqPpfzDX7tm', is_error=False)]"
+        },
+        {
+          "phase": "knowledge",
+          "output": "I found the following document related to your inquiry:\n\n- **refund.md**: This document outlines the returns and refunds policy, including eligibility for returns, how to request a return, and refund timing.\n\nIf you need more specific information, please refer to the document."
+        },
+        {
+          "phase": "resolution",
+          "output": "Agent started."
+        },
+        {
+          "phase": "resolution",
+          "output": "confidence=1.0 evidence=[Evidence(filename='refund.md', quote='Unused items, including shoes, in their original packaging can be requested for return within 30 days of delivery.'), Evidence(filename='refund.md', quote='Contact support with your order number and the item you want to return.'), Evidence(filename='refund.md', quote='After an approved returned item is received and inspected, an eligible refund is sent to the original payment method within 5-10 business days.')]"
+        },
+        {
+          "phase": "log",
+          "output": "Agent started."
+        },
+        {
+          "phase": "log",
+          "output": "[FunctionCall(id='call_2zqwBZeeKUK1zKN3XdfoOXwx', arguments='{}', name='log_ticket')]"
+        },
+        {
+          "phase": "log",
+          "output": "[FunctionExecutionResult(content='cc5628a0-279a-48da-9901-0ed502af4c17', name='log_ticket', call_id='call_2zqwBZeeKUK1zKN3XdfoOXwx', is_error=False)]"
+        },
+        {
+          "phase": "log",
+          "output": "The ticket has been successfully logged."
+        }
+      ]
+    },
+    {
+      "case": "account",
+      "checks": {
+        "status": true,
+        "category": true,
+        "expected_source": true,
+        "factual_answer": true,
+        "agent_order": true,
+        "actual_search_tool": true,
+        "actual_log_tool": true,
+        "no_fallback": true,
+        "no_unsupported_promises": true,
+        "exactly_one_log_row": true
+      },
+      "passed": true,
+      "synthetic": true,
+      "mode": "REAL OpenAI gpt-4o-mini API execution",
+      "expected_status": "Resolved",
+      "expected_categories": [
+        "Account"
+      ],
+      "result": {
+        "ticket_id": "8dac9e5a-70d4-4457-8aa7-5f97573799bf",
+        "timestamp": "2026-11-05T17:31:08.465658+00:00",
+        "customer_name": "SYNTHETIC TEST CUSTOMER",
+        "order_id": "DEMO-ONLY",
+        "complaint": "I forgot my password and can't log in.",
+        "category": "Account",
+        "urgency": "Low",
+        "sentiment": "Neutral",
+        "kb_sources": "account.md",
+        "response": "Here is the applicable policy and the next step you can take:\n\nOn the sign-in page, select \"Forgot password\", enter the email address linked to your account, and follow the reset link sent by email. [account.md]\n\nIf the reset email does not arrive or the reset link has expired, request a new link. [account.md]",
+        "status": "Resolved",
+        "escalation_reason": ""
+      },
+      "agent_events": [
+        {
+          "phase": "query",
+          "output": "Agent started."
+        },
+        {
+          "phase": "query",
+          "output": "category='Account' urgency='Low' sentiment='Neutral' summary='User is unable to log in due to a forgotten password.'"
+        },
+        {
+          "phase": "knowledge",
+          "output": "Agent started."
+        },
+        {
+          "phase": "knowledge",
+          "output": "[FunctionCall(id='call_SZdgmqObFVrhrbzoY38QEKWo', arguments='{}', name='search_kb')]"
+        },
+        {
+          "phase": "knowledge",
+          "output": "[FunctionExecutionResult(content='[{\"filename\": \"account.md\", \"passage\": \"# Account Access Policy — fictional demo store\\\\n\\\\nThese policies are fictional coursework examples, not a real retailer\\'s promises.\\\\n\\\\n## Forgotten password\\\\nOn the sign-in page, select \\\\\"Forgot password\\\\\", enter the email address linked to your account, and follow the reset link sent by email. Check your spam folder if it does not arrive.\\\\n\\\\n## Continued sign-in problems\\\\nIf the reset email does not arrive or the reset link has expired, request a new link. If you still cannot sign in, contact support for identity verification. Never share your password or one-time verification codes in chat.\\\\n\\\\nThis assistant cannot access accounts, reset passwords itself, or bypass identity verification.\\\\n\"}]', name='search_kb', call_id='call_SZdgmqObFVrhrbzoY38QEKWo', is_error=False)]"
+        },
+        {
+          "phase": "knowledge",
+          "output": "Found the following document: \n\n- **account.md** \n\nThis document contains information about the account access policy, including steps for resetting a forgotten password."
+        },
+        {
+          "phase": "resolution",
+          "output": "Agent started."
+        },
+        {
+          "phase": "resolution",
+          "output": "confidence=1.0 evidence=[Evidence(filename='account.md', quote='On the sign-in page, select \"Forgot password\", enter the email address linked to your account, and follow the reset link sent by email.'), Evidence(filename='account.md', quote='If the reset email does not arrive or the reset link has expired, request a new link.')]"
+        },
+        {
+          "phase": "log",
+          "output": "Agent started."
+        },
+        {
+          "phase": "log",
+          "output": "[FunctionCall(id='call_xtbohqHlwoZjiBhM4ZYgbObv', arguments='{}', name='log_ticket')]"
+        },
+        {
+          "phase": "log",
+          "output": "[FunctionExecutionResult(content='8dac9e5a-70d4-4457-8aa7-5f97573799bf', name='log_ticket', call_id='call_xtbohqHlwoZjiBhM4ZYgbObv', is_error=False)]"
+        },
+        {
+          "phase": "log",
+          "output": "The ticket has been successfully logged with ID: 8dac9e5a-70d4-4457-8aa7-5f97573799bf."
+        }
+      ]
+    },
+    {
+      "case": "broken_product",
+      "checks": {
+        "status": true,
+        "category": true,
+        "expected_source": true,
+        "factual_answer": true,
+        "agent_order": true,
+        "actual_search_tool": true,
+        "actual_log_tool": true,
+        "no_fallback": true,
+        "no_unsupported_promises": true,
+        "exactly_one_log_row": true
+      },
+      "passed": true,
+      "synthetic": true,
+      "mode": "REAL OpenAI gpt-4o-mini API execution",
+      "expected_status": "Resolved",
+      "expected_categories": [
+        "Product",
+        "Refund"
+      ],
+      "result": {
+        "ticket_id": "7f538cc2-ab74-42bc-b473-d0a4f57befd3",
+        "timestamp": "2026-11-05T17:31:15.682290+00:00",
+        "customer_name": "SYNTHETIC TEST CUSTOMER",
+        "order_id": "DEMO-ONLY",
+        "complaint": "The blender I received is broken. Can I get a replacement?",
+        "category": "Product",
+        "urgency": "Medium",
+        "sentiment": "Neutral",
+        "kb_sources": "product.md",
+        "response": "Here is the applicable policy and the next step you can take:\n\nStop using a damaged or defective product. Contact support within 7 days of delivery with your order number, a description of the problem, and photos of the item and packaging. [product.md]\n\nA representative will review the evidence and, if the claim is approved, arrange a replacement subject to stock availability or discuss an eligible refund. [product.md]",
+        "status": "Resolved",
+        "escalation_reason": ""
+      },
+      "agent_events": [
+        {
+          "phase": "query",
+          "output": "Agent started."
+        },
+        {
+          "phase": "query",
+          "output": "category='Product' urgency='Medium' sentiment='Neutral' summary='Customer received a broken blender and is requesting a replacement.'"
+        },
+        {
+          "phase": "knowledge",
+          "output": "Agent started."
+        },
+        {
+          "phase": "knowledge",
+          "output": "[FunctionCall(id='call_dfCgeO4YknAx9z0EbzWGTEvY', arguments='{}', name='search_kb')]"
+        },
+        {
+          "phase": "knowledge",
+          "output": "[FunctionExecutionResult(content='[{\"filename\": \"product.md\", \"passage\": \"# Damaged and Defective Products Policy — fictional demo store\\\\n\\\\nThese policies are fictional coursework examples, not a real retailer\\'s promises.\\\\n\\\\n## Broken product on arrival\\\\nStop using a damaged or defective product. Contact support within 7 days of delivery with your order number, a description of the problem, and photos of the item and packaging.\\\\n\\\\n## Replacement review\\\\nA representative will review the evidence and, if the claim is approved, arrange a replacement subject to stock availability or discuss an eligible refund. Keep the damaged item and packaging until you receive instructions.\\\\n\\\\nThis assistant cannot approve a replacement, determine stock, or authorize a refund.\\\\n\"}]', name='search_kb', call_id='call_dfCgeO4YknAx9z0EbzWGTEvY', is_error=False)]"
+        },
+        {
+          "phase": "knowledge",
+          "output": "I found a document titled \"product.md\" that contains information about the policy for damaged and defective products."
+        },
+        {
+          "phase": "resolution",
+          "output": "Agent started."
+        },
+        {
+          "phase": "resolution",
+          "output": "confidence=1.0 evidence=[Evidence(filename='product.md', quote='Stop using a damaged or defective product. Contact support within 7 days of delivery with your order number, a description of the problem, and photos of the item and packaging.'), Evidence(filename='product.md', quote='A representative will review the evidence and, if the claim is approved, arrange a replacement subject to stock availability or discuss an eligible refund.')]"
+        },
+        {
+          "phase": "log",
+          "output": "Agent started."
+        },
+        {
+          "phase": "log",
+          "output": "[FunctionCall(id='call_JrWcBI2TfKOwwgeadlUlRMPA', arguments='{}', name='log_ticket')]"
+        },
+        {
+          "phase": "log",
+          "output": "[FunctionExecutionResult(content='7f538cc2-ab74-42bc-b473-d0a4f57befd3', name='log_ticket', call_id='call_JrWcBI2TfKOwwgeadlUlRMPA', is_error=False)]"
+        },
+        {
+          "phase": "log",
+          "output": "The ticket has been successfully logged with the ID: 7f538cc2-ab74-42bc-b473-d0a4f57befd3."
+        }
+      ]
+    },
+    {
+      "case": "billing_legal",
+      "checks": {
+        "status": true,
+        "category": true,
+        "expected_source": true,
+        "factual_answer": true,
+        "agent_order": true,
+        "actual_search_tool": true,
+        "actual_log_tool": true,
+        "no_fallback": true,
+        "no_unsupported_promises": true,
+        "high_angry": true,
+        "exactly_one_log_row": true
+      },
+      "passed": true,
+      "synthetic": true,
+      "mode": "REAL OpenAI gpt-4o-mini API execution",
+      "expected_status": "Escalated",
+      "expected_categories": [
+        "Billing"
+      ],
+      "result": {
+        "ticket_id": "1208dff6-8fff-442e-9b8a-7f821db3deff",
+        "timestamp": "2026-11-05T17:31:20.980646+00:00",
+        "customer_name": "SYNTHETIC TEST CUSTOMER",
+        "order_id": "DEMO-ONLY",
+        "complaint": "You charged my card three times! Fix this now or I'm contacting my bank and a lawyer.",
+        "category": "Billing",
+        "urgency": "High",
+        "sentiment": "Very Angry",
+        "kb_sources": "",
+        "response": "I’m sorry this needs further review. This ticket is flagged for human support; no refund, replacement, account change, or payment action has been performed. A support representative must review the details before a resolution can be confirmed.",
+        "status": "Escalated",
+        "escalation_reason": "High urgency; Angry customer; Legal, fraud, payment dispute, or severe anger signal; No matching policy documents; Low or invalid confidence; Missing or unverified policy evidence"
+      },
+      "agent_events": [
+        {
+          "phase": "query",
+          "output": "Agent started."
+        },
+        {
+          "phase": "query",
+          "output": "category='Billing' urgency='High' sentiment='Very Angry' summary='Customer reports being charged three times and threatens to contact bank and lawyer if not resolved.'"
+        },
+        {
+          "phase": "knowledge",
+          "output": "Agent started."
+        },
+        {
+          "phase": "knowledge",
+          "output": "[FunctionCall(id='call_jyNecvzy9i6eGDkmBlWkKDSU', arguments='{}', name='search_kb')]"
+        },
+        {
+          "phase": "knowledge",
+          "output": "[FunctionExecutionResult(content='[]', name='search_kb', call_id='call_jyNecvzy9i6eGDkmBlWkKDSU', is_error=False)]"
+        },
+        {
+          "phase": "knowledge",
+          "output": "No matching documents found."
+        },
+        {
+          "phase": "resolution",
+          "output": "Agent started."
+        },
+        {
+          "phase": "resolution",
+          "output": "confidence=0.0 evidence=[]"
+        },
+        {
+          "phase": "log",
+          "output": "Agent started."
+        },
+        {
+          "phase": "log",
+          "output": "[FunctionCall(id='call_iTLWMmlyBonwWDVhyARMkBfk', arguments='{}', name='log_ticket')]"
+        },
+        {
+          "phase": "log",
+          "output": "[FunctionExecutionResult(content='1208dff6-8fff-442e-9b8a-7f821db3deff', name='log_ticket', call_id='call_iTLWMmlyBonwWDVhyARMkBfk', is_error=False)]"
+        },
+        {
+          "phase": "log",
+          "output": "The complaint has been successfully logged with the ticket ID: 1208dff6-8fff-442e-9b8a-7f821db3deff."
+        }
+      ]
+    },
+    {
+      "case": "unknown_policy",
+      "checks": {
+        "status": true,
+        "category": true,
+        "expected_source": true,
+        "factual_answer": true,
+        "agent_order": true,
+        "actual_search_tool": true,
+        "actual_log_tool": true,
+        "no_fallback": true,
+        "no_unsupported_promises": true,
+        "empty_retrieval": true,
+        "exactly_one_log_row": true
+      },
+      "passed": true,
+      "synthetic": true,
+      "mode": "REAL OpenAI gpt-4o-mini API execution",
+      "expected_status": "Escalated",
+      "expected_categories": [
+        "Other"
+      ],
+      "result": {
+        "ticket_id": "445fa8d5-c075-44b0-93d2-04ac55c03a51",
+        "timestamp": "2026-11-05T17:31:26.967972+00:00",
+        "customer_name": "SYNTHETIC TEST CUSTOMER",
+        "order_id": "DEMO-ONLY",
+        "complaint": "Do you sell gift cards for a company of 500 employees with custom branding?",
+        "category": "Other",
+        "urgency": "Low",
+        "sentiment": "Neutral",
+        "kb_sources": "",
+        "response": "I’m sorry this needs further review. This ticket is flagged for human support; no refund, replacement, account change, or payment action has been performed. A support representative must review the details before a resolution can be confirmed.",
+        "status": "Escalated",
+        "escalation_reason": "No matching policy documents; Low or invalid confidence; Missing or unverified policy evidence"
+      },
+      "agent_events": [
+        {
+          "phase": "query",
+          "output": "Agent started."
+        },
+        {
+          "phase": "query",
+          "output": "category='Other' urgency='Low' sentiment='Neutral' summary='Inquiry about availability of custom branded gift cards for a company with 500 employees.'"
+        },
+        {
+          "phase": "knowledge",
+          "output": "Agent started."
+        },
+        {
+          "phase": "knowledge",
+          "output": "[FunctionCall(id='call_GFLKWMjW0SFLYPSrXfNfuT8n', arguments='{}', name='search_kb')]"
+        },
+        {
+          "phase": "knowledge",
+          "output": "[FunctionExecutionResult(content='[]', name='search_kb', call_id='call_GFLKWMjW0SFLYPSrXfNfuT8n', is_error=False)]"
+        },
+        {
+          "phase": "knowledge",
+          "output": "No matching documents found."
+        },
+        {
+          "phase": "resolution",
+          "output": "Agent started."
+        },
+        {
+          "phase": "resolution",
+          "output": "confidence=0.0 evidence=[]"
+        },
+        {
+          "phase": "log",
+          "output": "Agent started."
+        },
+        {
+          "phase": "log",
+          "output": "[FunctionCall(id='call_joh7hO6d1boHpLR0luoX6WNW', arguments='{}', name='log_ticket')]"
+        },
+        {
+          "phase": "log",
+          "output": "[FunctionExecutionResult(content='445fa8d5-c075-44b0-93d2-04ac55c03a51', name='log_ticket', call_id='call_joh7hO6d1boHpLR0luoX6WNW', is_error=False)]"
+        },
+        {
+          "phase": "log",
+          "output": "The ticket has been successfully logged."
+        }
+      ]
+    },
+    {
+      "case": "fraud",
+      "checks": {
+        "status": true,
+        "category": true,
+        "expected_source": true,
+        "factual_answer": true,
+        "agent_order": true,
+        "actual_search_tool": true,
+        "actual_log_tool": true,
+        "no_fallback": true,
+        "no_unsupported_promises": true,
+        "exactly_one_log_row": true
+      },
+      "passed": true,
+      "synthetic": true,
+      "mode": "REAL OpenAI gpt-4o-mini API execution",
+      "expected_status": "Escalated",
+      "expected_categories": [
+        "Billing",
+        "Account"
+      ],
+      "result": {
+        "ticket_id": "94bc5eca-9535-422c-a063-e4cada72e4d9",
+        "timestamp": "2026-11-05T17:31:32.582186+00:00",
+        "customer_name": "SYNTHETIC TEST CUSTOMER",
+        "order_id": "DEMO-ONLY",
+        "complaint": "There is an unauthorized purchase on my account. This is fraud.",
+        "category": "Billing",
+        "urgency": "High",
+        "sentiment": "Very Angry",
+        "kb_sources": "account.md; refund.md",
+        "response": "I’m sorry this needs further review. This ticket is flagged for human support; no refund, replacement, account change, or payment action has been performed. A support representative must review the details before a resolution can be confirmed.",
+        "status": "Escalated",
+        "escalation_reason": "High urgency; Angry customer; Legal, fraud, payment dispute, or severe anger signal; Low or invalid confidence; Missing or unverified policy evidence"
+      },
+      "agent_events": [
+        {
+          "phase": "query",
+          "output": "Agent started."
+        },
+        {
+          "phase": "query",
+          "output": "category='Billing' urgency='High' sentiment='Very Angry' summary='Unauthorized purchase on account indicating fraud.'"
+        },
+        {
+          "phase": "knowledge",
+          "output": "Agent started."
+        },
+        {
+          "phase": "knowledge",
+          "output": "[FunctionCall(id='call_ovQctNDxCITCyvBepFQ5aZ1X', arguments='{}', name='search_kb')]"
+        },
+        {
+          "phase": "knowledge",
+          "output": "[FunctionExecutionResult(content='[{\"filename\": \"account.md\", \"passage\": \"# Account Access Policy — fictional demo store\\\\n\\\\nThese policies are fictional coursework examples, not a real retailer\\'s promises.\\\\n\\\\n## Forgotten password\\\\nOn the sign-in page, select \\\\\"Forgot password\\\\\", enter the email address linked to your account, and follow the reset link sent by email. Check your spam folder if it does not arrive.\\\\n\\\\n## Continued sign-in problems\\\\nIf the reset email does not arrive or the reset link has expired, request a new link. If you still cannot sign in, contact support for identity verification. Never share your password or one-time verification codes in chat.\\\\n\\\\nThis assistant cannot access accounts, reset passwords itself, or bypass identity verification.\\\\n\"}, {\"filename\": \"refund.md\", \"passage\": \"# Returns and Refunds Policy — fictional demo store\\\\n\\\\nThese policies are fictional coursework examples, not a real retailer\\'s promises.\\\\n\\\\n## Return eligibility\\\\nUnused items, including shoes, in their original packaging can be requested for return within 30 days of delivery. Keep your proof of purchase.\\\\n\\\\n## How to request a return\\\\nContact support with your order number and the item you want to return. A representative will review eligibility and provide return instructions. Do not send items back until the return is approved.\\\\n\\\\n## Refund timing\\\\nAfter an approved returned item is received and inspected, an eligible refund is sent to the original payment method within 5-10 business days. This assistant cannot approve returns or issue refunds.\\\\n\"}]', name='search_kb', call_id='call_ovQctNDxCITCyvBepFQ5aZ1X', is_error=False)]"
+        },
+        {
+          "phase": "knowledge",
+          "output": "I found the following documents related to your query:\n\n1. **account.md** - Contains information about account access policies.\n2. **refund.md** - Contains information about returns and refunds policy.\n\nIf you need further assistance, please refer to these documents."
+        },
+        {
+          "phase": "resolution",
+          "output": "Agent started."
+        },
+        {
+          "phase": "resolution",
+          "output": "confidence=0.0 evidence=[]"
+        },
+        {
+          "phase": "log",
+          "output": "Agent started."
+        },
+        {
+          "phase": "log",
+          "output": "[FunctionCall(id='call_esZRnUm3sWHkRhKU1i8bjFHp', arguments='{}', name='log_ticket')]"
+        },
+        {
+          "phase": "log",
+          "output": "[FunctionExecutionResult(content='94bc5eca-9535-422c-a063-e4cada72e4d9', name='log_ticket', call_id='call_esZRnUm3sWHkRhKU1i8bjFHp', is_error=False)]"
+        },
+        {
+          "phase": "log",
+          "output": "The ticket has been successfully logged with ID: 94bc5eca-9535-422c-a063-e4cada72e4d9."
+        }
+      ]
+    },
+    {
+      "case": "delivery_timeline",
+      "checks": {
+        "status": true,
+        "category": true,
+        "expected_source": true,
+        "factual_answer": true,
+        "agent_order": true,
+        "actual_search_tool": true,
+        "actual_log_tool": true,
+        "no_fallback": true,
+        "no_unsupported_promises": true,
+        "exactly_one_log_row": true
+      },
+      "passed": true,
+      "synthetic": true,
+      "mode": "REAL OpenAI gpt-4o-mini API execution",
+      "expected_status": "Resolved",
+      "expected_categories": [
+        "Shipping"
+      ],
+      "result": {
+        "ticket_id": "116aecad-e4ca-4353-8281-436f4963f270",
+        "timestamp": "2026-11-05T17:31:39.340770+00:00",
+        "customer_name": "SYNTHETIC TEST CUSTOMER",
+        "order_id": "DEMO-ONLY",
+        "complaint": "How long does standard delivery normally take?",
+        "category": "Shipping",
+        "urgency": "Low",
+        "sentiment": "Neutral",
+        "kb_sources": "shipping.md",
+        "response": "Here is the applicable policy and the next step you can take:\n\nStandard orders normally arrive within 3-5 business days after dispatch. [shipping.md]",
+        "status": "Resolved",
+        "escalation_reason": ""
+      },
+      "agent_events": [
+        {
+          "phase": "query",
+          "output": "Agent started."
+        },
+        {
+          "phase": "query",
+          "output": "category='Shipping' urgency='Low' sentiment='Neutral' summary='Inquiry about the duration of standard delivery.'"
+        },
+        {
+          "phase": "knowledge",
+          "output": "Agent started."
+        },
+        {
+          "phase": "knowledge",
+          "output": "[FunctionCall(id='call_Blj3mHvbwwtkzQVZ6EwbmWRL', arguments='{}', name='search_kb')]"
+        },
+        {
+          "phase": "knowledge",
+          "output": "[FunctionExecutionResult(content='[{\"filename\": \"shipping.md\", \"passage\": \"# Shipping Policy — fictional demo store\\\\n\\\\nThese policies are fictional coursework examples, not a real retailer\\'s promises.\\\\n\\\\n## Standard delivery\\\\nStandard orders normally arrive within 3-5 business days after dispatch. Delivery estimates are not guarantees.\\\\n\\\\n## Delayed orders\\\\nFor a delayed order, open the tracking link in your dispatch email and check the latest carrier update. If the expected delivery date has passed, contact support with your order number so a representative can investigate with the carrier.\\\\n\\\\nThis assistant cannot look up live tracking, confirm an order\\'s location, contact a carrier, or guarantee an arrival date.\\\\n\"}]', name='search_kb', call_id='call_Blj3mHvbwwtkzQVZ6EwbmWRL', is_error=False)]"
+        },
+        {
+          "phase": "knowledge",
+          "output": "I found a document related to your inquiry. The filename is \"shipping.md\". It contains information about standard delivery, stating that standard orders normally arrive within 3-5 business days after dispatch. However, delivery estimates are not guarantees."
+        },
+        {
+          "phase": "resolution",
+          "output": "Agent started."
+        },
+        {
+          "phase": "resolution",
+          "output": "confidence=1.0 evidence=[Evidence(filename='shipping.md', quote='Standard orders normally arrive within 3-5 business days after dispatch.')]"
+        },
+        {
+          "phase": "log",
+          "output": "Agent started."
+        },
+        {
+          "phase": "log",
+          "output": "[FunctionCall(id='call_bGUYyUfMfKul4k4c1942xCRl', arguments='{}', name='log_ticket')]"
+        },
+        {
+          "phase": "log",
+          "output": "[FunctionExecutionResult(content='116aecad-e4ca-4353-8281-436f4963f270', name='log_ticket', call_id='call_bGUYyUfMfKul4k4c1942xCRl', is_error=False)]"
+        },
+        {
+          "phase": "log",
+          "output": "The ticket has been successfully logged."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+......sssssssss.....                                                     [100%]
+=============================== warnings summary ===============================
+tests/test_runner.py::test_public_runner_creates_fresh_team_and_closes_client
+tests/test_runner.py::test_public_runner_creates_fresh_team_and_closes_client
+tests/test_runner.py::test_public_runner_creates_fresh_team_and_closes_client
+tests/test_runner.py::test_public_runner_creates_fresh_team_and_closes_client
+tests/test_team.py::test_four_real_agents_execute_in_order_and_log_canonical_state
+tests/test_team.py::test_four_real_agents_execute_in_order_and_log_canonical_state
+  /root/.hermes/AI/customer-support-agents/.venv/lib/python3.14/site-packages/autogen_core/tools/_function_tool.py:112: DeprecationWarning: 'asyncio.iscoroutinefunction' is deprecated and slated for removal in Python 3.16; use inspect.iscoroutinefunction() instead
+    if asyncio.iscoroutinefunction(self._func):
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+11 passed, 9 skipped, 6 warnings in 1.28s

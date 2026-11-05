@@ -1,0 +1,8 @@
+{
+  "clean_zip_install": true,
+  "no_env_required_for_startup": true,
+  "no_prebuilt_log_or_index": true,
+  "pip_check": "No broken requirements found.",
+  "pytest": "......sssssssss.....                                                     [100%]\n=============================== warnings summary ===============================\ntests/test_runner.py::test_public_runner_creates_fresh_team_and_closes_client\ntests/test_runner.py::test_public_runner_creates_fresh_team_and_closes_client\ntests/test_runner.py::test_public_runner_creates_fresh_team_and_closes_client\ntests/test_runner.py::test_public_runner_creates_fresh_team_and_closes_client\ntests/test_team.py::test_four_real_agents_execute_in_order_and_log_canonical_state\ntests/test_team.py::test_four_real_agents_execute_in_order_and_log_canonical_state\n  /root/.hermes/cache/scratch/support-clean-_becspkf/venv/lib/python3.14/site-packages/autogen_core/tools/_function_tool.py:112: DeprecationWarning: 'asyncio.iscoroutinefunction' is deprecated and slated for removal in Python 3.16; use inspect.iscoroutinefunction() instead\n    if asyncio.iscoroutinefunction(self._func):\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n11 passed, 9 skipped, 6 warnings in 1.93s\n",
+  "python": "3.14.9 (main, Oct 21 2026, 17:48:02) [Clang 23.1.3 ]"
+}
