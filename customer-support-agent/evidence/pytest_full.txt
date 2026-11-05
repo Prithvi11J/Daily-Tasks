@@ -1,0 +1,97 @@
+....................                                                     [100%]
+=============================== warnings summary ===============================
+tests/test_live.py::test_live_scenario[shipping_delay]
+  /root/.hermes/AI/customer-support-agents/.venv/lib/python3.14/site-packages/pydantic/main.py:520: UserWarning: Pydantic serializer warnings:
+    PydanticSerializationUnexpectedValue(Expected `none` - serialized value may not be as expected [field_name='parsed', input_value=QueryResult(category='Shi...us of a delayed order.'), input_type=QueryResult])
+    return self.__pydantic_serializer__.to_python(
+
+tests/test_live.py: 16 warnings
+tests/test_live_ui.py: 6 warnings
+tests/test_runner.py: 4 warnings
+tests/test_team.py: 2 warnings
+  /root/.hermes/AI/customer-support-agents/.venv/lib/python3.14/site-packages/autogen_core/tools/_function_tool.py:112: DeprecationWarning: 'asyncio.iscoroutinefunction' is deprecated and slated for removal in Python 3.16; use inspect.iscoroutinefunction() instead
+    if asyncio.iscoroutinefunction(self._func):
+
+tests/test_live.py::test_live_scenario[shipping_delay]
+  /root/.hermes/AI/customer-support-agents/.venv/lib/python3.14/site-packages/pydantic/main.py:520: UserWarning: Pydantic serializer warnings:
+    PydanticSerializationUnexpectedValue(Expected `none` - serialized value may not be as expected [field_name='parsed', input_value=ResolutionResult(confiden...te with the carrier.')]), input_type=ResolutionResult])
+    return self.__pydantic_serializer__.to_python(
+
+tests/test_live.py::test_live_scenario[refund]
+  /root/.hermes/AI/customer-support-agents/.venv/lib/python3.14/site-packages/pydantic/main.py:520: UserWarning: Pydantic serializer warnings:
+    PydanticSerializationUnexpectedValue(Expected `none` - serialized value may not be as expected [field_name='parsed', input_value=QueryResult(category='Ref...ut the refund process.'), input_type=QueryResult])
+    return self.__pydantic_serializer__.to_python(
+
+tests/test_live.py::test_live_scenario[refund]
+  /root/.hermes/AI/customer-support-agents/.venv/lib/python3.14/site-packages/pydantic/main.py:520: UserWarning: Pydantic serializer warnings:
+    PydanticSerializationUnexpectedValue(Expected `none` - serialized value may not be as expected [field_name='parsed', input_value=ResolutionResult(confiden... 5-10 business days.')]), input_type=ResolutionResult])
+    return self.__pydantic_serializer__.to_python(
+
+tests/test_live.py::test_live_scenario[account]
+  /root/.hermes/AI/customer-support-agents/.venv/lib/python3.14/site-packages/pydantic/main.py:520: UserWarning: Pydantic serializer warnings:
+    PydanticSerializationUnexpectedValue(Expected `none` - serialized value may not be as expected [field_name='parsed', input_value=QueryResult(category='Acc... a forgotten password.'), input_type=QueryResult])
+    return self.__pydantic_serializer__.to_python(
+
+tests/test_live.py::test_live_scenario[account]
+  /root/.hermes/AI/customer-support-agents/.venv/lib/python3.14/site-packages/pydantic/main.py:520: UserWarning: Pydantic serializer warnings:
+    PydanticSerializationUnexpectedValue(Expected `none` - serialized value may not be as expected [field_name='parsed', input_value=ResolutionResult(confiden... request a new link.')]), input_type=ResolutionResult])
+    return self.__pydantic_serializer__.to_python(
+
+tests/test_live.py::test_live_scenario[broken_product]
+tests/test_live_ui.py::test_live_ui_followup_reset_and_escalation
+  /root/.hermes/AI/customer-support-agents/.venv/lib/python3.14/site-packages/pydantic/main.py:520: UserWarning: Pydantic serializer warnings:
+    PydanticSerializationUnexpectedValue(Expected `none` - serialized value may not be as expected [field_name='parsed', input_value=QueryResult(category='Pro...uesting a replacement.'), input_type=QueryResult])
+    return self.__pydantic_serializer__.to_python(
+
+tests/test_live.py::test_live_scenario[broken_product]
+tests/test_live_ui.py::test_live_ui_followup_reset_and_escalation
+tests/test_live_ui.py::test_live_ui_followup_reset_and_escalation
+  /root/.hermes/AI/customer-support-agents/.venv/lib/python3.14/site-packages/pydantic/main.py:520: UserWarning: Pydantic serializer warnings:
+    PydanticSerializationUnexpectedValue(Expected `none` - serialized value may not be as expected [field_name='parsed', input_value=ResolutionResult(confiden... an eligible refund.')]), input_type=ResolutionResult])
+    return self.__pydantic_serializer__.to_python(
+
+tests/test_live.py::test_live_scenario[billing_legal]
+  /root/.hermes/AI/customer-support-agents/.venv/lib/python3.14/site-packages/pydantic/main.py:520: UserWarning: Pydantic serializer warnings:
+    PydanticSerializationUnexpectedValue(Expected `none` - serialized value may not be as expected [field_name='parsed', input_value=QueryResult(category='Bil...awyer if not resolved.'), input_type=QueryResult])
+    return self.__pydantic_serializer__.to_python(
+
+tests/test_live.py::test_live_scenario[billing_legal]
+tests/test_live.py::test_live_scenario[unknown_policy]
+tests/test_live.py::test_live_scenario[fraud]
+tests/test_live_ui.py::test_live_ui_followup_reset_and_escalation
+  /root/.hermes/AI/customer-support-agents/.venv/lib/python3.14/site-packages/pydantic/main.py:520: UserWarning: Pydantic serializer warnings:
+    PydanticSerializationUnexpectedValue(Expected `none` - serialized value may not be as expected [field_name='parsed', input_value=ResolutionResult(confidence=0.0, evidence=[]), input_type=ResolutionResult])
+    return self.__pydantic_serializer__.to_python(
+
+tests/test_live.py::test_live_scenario[unknown_policy]
+  /root/.hermes/AI/customer-support-agents/.venv/lib/python3.14/site-packages/pydantic/main.py:520: UserWarning: Pydantic serializer warnings:
+    PydanticSerializationUnexpectedValue(Expected `none` - serialized value may not be as expected [field_name='parsed', input_value=QueryResult(category='Oth...ny with 500 employees.'), input_type=QueryResult])
+    return self.__pydantic_serializer__.to_python(
+
+tests/test_live.py::test_live_scenario[fraud]
+  /root/.hermes/AI/customer-support-agents/.venv/lib/python3.14/site-packages/pydantic/main.py:520: UserWarning: Pydantic serializer warnings:
+    PydanticSerializationUnexpectedValue(Expected `none` - serialized value may not be as expected [field_name='parsed', input_value=QueryResult(category='Bil...ount indicating fraud.'), input_type=QueryResult])
+    return self.__pydantic_serializer__.to_python(
+
+tests/test_live.py::test_live_scenario[delivery_timeline]
+  /root/.hermes/AI/customer-support-agents/.venv/lib/python3.14/site-packages/pydantic/main.py:520: UserWarning: Pydantic serializer warnings:
+    PydanticSerializationUnexpectedValue(Expected `none` - serialized value may not be as expected [field_name='parsed', input_value=QueryResult(category='Shi... of standard delivery.'), input_type=QueryResult])
+    return self.__pydantic_serializer__.to_python(
+
+tests/test_live.py::test_live_scenario[delivery_timeline]
+  /root/.hermes/AI/customer-support-agents/.venv/lib/python3.14/site-packages/pydantic/main.py:520: UserWarning: Pydantic serializer warnings:
+    PydanticSerializationUnexpectedValue(Expected `none` - serialized value may not be as expected [field_name='parsed', input_value=ResolutionResult(confiden...days after dispatch.')]), input_type=ResolutionResult])
+    return self.__pydantic_serializer__.to_python(
+
+tests/test_live_ui.py::test_live_ui_followup_reset_and_escalation
+  /root/.hermes/AI/customer-support-agents/.venv/lib/python3.14/site-packages/pydantic/main.py:520: UserWarning: Pydantic serializer warnings:
+    PydanticSerializationUnexpectedValue(Expected `none` - serialized value may not be as expected [field_name='parsed', input_value=QueryResult(category='Pro...t of a broken blender.'), input_type=QueryResult])
+    return self.__pydantic_serializer__.to_python(
+
+tests/test_live_ui.py::test_live_ui_followup_reset_and_escalation
+  /root/.hermes/AI/customer-support-agents/.venv/lib/python3.14/site-packages/pydantic/main.py:520: UserWarning: Pydantic serializer warnings:
+    PydanticSerializationUnexpectedValue(Expected `none` - serialized value may not be as expected [field_name='parsed', input_value=QueryResult(category='Oth... with custom branding.'), input_type=QueryResult])
+    return self.__pydantic_serializer__.to_python(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+20 passed, 50 warnings in 72.30s (0:01:12)
